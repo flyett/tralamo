@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TralAmo - Premium Travel Services | Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="Logo - TralAmo 500 pixels width.png" alt="TralAmo Logo" class="logo">
+                    <span class="brand-name">TralAmo</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Discover Southeast Asia with TralAmo</h1>
+                <p class="hero-subtitle">Premium travel services at attractive rates for individuals, businesses, and government clients</p>
+                <div class="hero-buttons">
+                    <a href="packages.html" class="btn btn-primary">Explore Packages</a>
+                    <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose TralAmo?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">✈️</div>
+                        <h3>Best Rates</h3>
+                        <p>Competitive pricing for all travel needs, from budget to luxury experiences</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏢</div>
+                        <h3>Corporate Solutions</h3>
+                        <p>Tailored travel packages for businesses and government organizations</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌏</div>
+                        <h3>Southeast Asia Expertise</h3>
+                        <p>Deep knowledge of destinations across the region for unforgettable journeys</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Premium Service</h3>
+                        <p>Dedicated support and personalized attention for every client</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="services-preview">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Flight Bookings</h3>
+                        <p>Domestic and international flights at the best rates</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Hotel Reservations</h3>
+                        <p>Luxury and budget accommodations across Southeast Asia</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Travel Packages</h3>
+                        <p>Curated holiday packages for individuals and groups</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Corporate Travel</h3>
+                        <p>Business travel management and group bookings</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="services.html" class="btn btn-outline">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Plan Your Next Adventure?</h2>
+                <p>Contact us today for personalized travel solutions</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TralAmo</h3>
+                    <p>Your trusted partner for premium travel services across Southeast Asia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Flight Bookings</a></li>
+                        <li><a href="services.html">Hotel Reservations</a></li>
+                        <li><a href="services.html">Travel Packages</a></li>
+                        <li><a href="services.html">Corporate Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@tralamo.com</p>
+                    <p>Phone: +65 XXXX XXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TralAmo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TralAmo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="Logo - TralAmo 500 pixels width.png" alt="TralAmo Logo" class="logo">
+                    <span class="brand-name">TralAmo</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We're here to help plan your perfect trip</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                    <div>
+                        <h2 style="color: var(--secondary-color); margin-bottom: 1.5rem;">Get in Touch</h2>
+                        <p style="color: var(--text-light); margin-bottom: 2rem; line-height: 1.8;">
+                            Have questions about our services or ready to book your next adventure? 
+                            Our travel experts are here to assist you. Reach out to us through any 
+                            of the following methods, and we'll get back to you as soon as possible.
+                        </p>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--secondary-color); margin-bottom: 0.5rem; font-size: 1.2rem;">📧 Email</h3>
+                            <p style="color: var(--text-light);">
+                                <a href="mailto:info@tralamo.com" style="color: var(--primary-color); text-decoration: none;">info@tralamo.com</a>
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--secondary-color); margin-bottom: 0.5rem; font-size: 1.2rem;">📞 Phone</h3>
+                            <p style="color: var(--text-light);">
+                                <a href="tel:+65XXXXXXXX" style="color: var(--primary-color); text-decoration: none;">+65 XXXX XXXX</a>
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--secondary-color); margin-bottom: 0.5rem; font-size: 1.2rem;">🕒 Business Hours</h3>
+                            <p style="color: var(--text-light); line-height: 1.8;">
+                                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 4:00 PM<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 style="color: var(--secondary-color); margin-bottom: 0.5rem; font-size: 1.2rem;">📍 Office Address</h3>
+                            <p style="color: var(--text-light); line-height: 1.8;">
+                                TralAmo Travel Services<br>
+                                Singapore<br>
+                                Southeast Asia
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 style="color: var(--secondary-color); margin-bottom: 1.5rem;">Send Us a Message</h2>
+                        <form class="contact-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="flight">Flight Bookings</option>
+                                    <option value="hotel">Hotel Reservations</option>
+                                    <option value="package">Travel Packages</option>
+                                    <option value="corporate">Corporate Travel</option>
+                                    <option value="government">Government Travel</option>
+                                    <option value="group">Group Travel</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="background: var(--bg-light);">
+            <div class="container">
+                <h2 class="section-title">Why Contact Us?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Expert Consultation</h3>
+                        <p>Get personalized travel advice from our experienced team</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Best Rates</h3>
+                        <p>We'll find you the best deals and competitive pricing</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✈️</div>
+                        <h3>Custom Itineraries</h3>
+                        <p>Tailored travel plans designed specifically for your needs</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock assistance during your travels</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Start Planning?</h2>
+                <p>Let's create your perfect travel experience together</p>
+                <a href="packages.html" class="btn btn-primary">View Packages</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TralAmo</h3>
+                    <p>Your trusted partner for premium travel services across Southeast Asia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Flight Bookings</a></li>
+                        <li><a href="services.html">Hotel Reservations</a></li>
+                        <li><a href="services.html">Travel Packages</a></li>
+                        <li><a href="services.html">Corporate Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@tralamo.com</p>
+                    <p>Phone: +65 XXXX XXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TralAmo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Simple form handling (in a real scenario, this would submit to a server)
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
