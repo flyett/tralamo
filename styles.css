@@ -6,15 +6,17 @@
 }
 
 :root {
-    --primary-color: #FF6B35;
-    --secondary-color: #004E89;
-    --accent-color: #FFA500;
-    --text-dark: #2C3E50;
-    --text-light: #7F8C8D;
-    --bg-light: #F8F9FA;
+    --primary-color: #1E88E5;
+    --secondary-color: #0D47A1;
+    --accent-color: #FF6B35;
+    --text-dark: #212121;
+    --text-light: #757575;
+    --bg-light: #F5F5F5;
     --white: #FFFFFF;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.15);
+    --gradient-primary: linear-gradient(135deg, #1E88E5 0%, #0D47A1 100%);
+    --gradient-accent: linear-gradient(135deg, #FF6B35 0%, #FFA500 100%);
 }
 
 body {
@@ -115,8 +117,8 @@ header {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 600px;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    height: 650px;
+    background: var(--gradient-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,6 +183,7 @@ header {
 .btn-primary {
     background: var(--white);
     color: var(--primary-color);
+    font-weight: 600;
 }
 
 .btn-primary:hover {
@@ -194,23 +197,28 @@ header {
     background: transparent;
     color: var(--white);
     border-color: var(--white);
+    font-weight: 600;
 }
 
 .btn-secondary:hover {
     background: var(--white);
     color: var(--primary-color);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-outline {
     background: transparent;
     color: var(--primary-color);
     border-color: var(--primary-color);
+    font-weight: 600;
 }
 
 .btn-outline:hover {
     background: var(--primary-color);
     color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 /* Sections */
@@ -293,16 +301,18 @@ section {
 }
 
 .service-card {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    background: var(--gradient-primary);
     padding: 2.5rem;
-    border-radius: 10px;
+    border-radius: 12px;
     color: var(--white);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
 }
 
 .service-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .service-card h3 {
@@ -321,7 +331,7 @@ section {
 
 /* CTA Section */
 .cta {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    background: var(--gradient-primary);
     color: var(--white);
     text-align: center;
 }
@@ -354,7 +364,7 @@ footer {
 .footer-section h3,
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .footer-section p {
@@ -377,7 +387,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .footer-bottom {
@@ -389,7 +399,7 @@ footer {
 
 /* Page Specific Styles */
 .page-header {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    background: var(--gradient-primary);
     color: var(--white);
     padding: 100px 0 60px;
     text-align: center;
@@ -457,7 +467,7 @@ footer {
 .package-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    background: var(--gradient-primary);
     display: flex;
     align-items: center;
     justify-content: center;
