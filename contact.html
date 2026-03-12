@@ -4,7 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - TralAmo Travel Services</title>
+    <meta name="description" content="Contact TralAmo for personalized travel solutions. 24/7 customer service available. Get quotes for flights, hotels, holiday packages, tours, and more.">
+    <link rel="canonical" href="https://tralamo.com/contact">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us - TralAmo Travel Services">
+    <meta property="og:description" content="Get in touch with TralAmo for personalized travel solutions. 24/7 customer service available for all your travel needs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tralamo.com/contact">
+    <meta property="og:site_name" content="TralAmo">
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" />
+
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBF0PCVL7V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KBF0PCVL7V');
+    </script>
+
+    <!-- HubSpot Tracking Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/245515681.js"></script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window,document,"clarity","script","vum63ix55x");
+    </script>
 </head>
 <body>
     <header>
@@ -159,8 +193,8 @@
                 <h2>Ready to Start Planning?</h2>
                 <p>Experience hassle-free bookings with the best prices in the industry. Let's create your perfect travel experience together.</p>
                 <div class="hero-buttons">
-                    <a href="packages.html" class="btn btn-primary">View Packages</a>
-                    <a href="services.html" class="btn btn-secondary">View Services</a>
+                    <a href="packages.html" class="btn btn-primary" onclick="gtag('event','cta_click',{event_category:'contact_cta',event_label:'view_packages'})">View Packages</a>
+                    <a href="services.html" class="btn btn-secondary" onclick="gtag('event','cta_click',{event_category:'contact_cta',event_label:'view_services'})">View Services</a>
                 </div>
             </div>
         </section>
@@ -213,11 +247,63 @@
             this.classList.toggle('active');
         });
 
-        // Simple form handling (in a real scenario, this would submit to a server)
+        // Contact form submission — pushes to HubSpot + GA conversion
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
+
+            var formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+
+            // Fire GA conversion event
+            gtag('event', 'generate_lead', {
+                event_category: 'contact_form',
+                event_label: formData.service || 'general',
+                value: 1
+            });
+
+            // Submit to HubSpot Forms API
+            // Replace 245515681 and 6b9808c1-dc49-44e7-92cc-15516c784648 with your actual values
+            // Create the form in HubSpot: Marketing > Forms > Create Form
+            var hubspotPortalId = '245515681';
+            var hubspotFormGuid = '6b9808c1-dc49-44e7-92cc-15516c784648';
+
+            var hubspotData = {
+                fields: [
+                    { name: 'firstname', value: formData.name },
+                    { name: 'email', value: formData.email },
+                    { name: 'phone', value: formData.phone },
+                    { name: 'service_interest', value: formData.service },
+                    { name: 'message', value: formData.message }
+                ],
+                context: {
+                    pageUri: window.location.href,
+                    pageName: document.title
+                }
+            };
+
+            fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + hubspotPortalId + '/' + hubspotFormGuid, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(hubspotData)
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    alert('Thank you for your message! We will get back to you soon.');
+                    e.target.reset();
+                } else {
+                    alert('Thank you for your interest! We will contact you shortly.');
+                    e.target.reset();
+                }
+            })
+            .catch(function() {
+                alert('Thank you for your interest! We will contact you shortly.');
+                e.target.reset();
+            });
         });
     </script>
 </body>

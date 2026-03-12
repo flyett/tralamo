@@ -4,7 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - TralAmo Travel Services</title>
+    <meta name="description" content="TralAmo travel services: air tickets, hotel bookings, car rentals, customized holiday packages, tours, cruises, travel insurance, visa assistance, and dedicated account management.">
+    <link rel="canonical" href="https://tralamo.com/services">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Our Services - TralAmo Travel Services">
+    <meta property="og:description" content="Comprehensive travel services including flights, hotels, car rentals, holiday packages, tours, cruises, insurance, and visa assistance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tralamo.com/services">
+    <meta property="og:site_name" content="TralAmo">
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" />
+
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBF0PCVL7V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KBF0PCVL7V');
+    </script>
+
+    <!-- HubSpot Tracking Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/245515681.js"></script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window,document,"clarity","script","vum63ix55x");
+    </script>
 </head>
 <body>
     <header>
@@ -176,8 +210,8 @@
                 <h2>Need Help Planning Your Trip?</h2>
                 <p>Experience hassle-free bookings with the best prices in the industry. Contact us today to discuss your travel requirements.</p>
                 <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                    <a href="packages.html" class="btn btn-secondary">View Packages</a>
+                    <a href="contact.html" class="btn btn-primary" onclick="gtag('event','cta_click',{event_category:'services_cta',event_label:'contact_us'})">Contact Us</a>
+                    <a href="packages.html" class="btn btn-secondary" onclick="gtag('event','cta_click',{event_category:'services_cta',event_label:'view_packages'})">View Packages</a>
                 </div>
             </div>
         </section>

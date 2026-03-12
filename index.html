@@ -4,7 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Journey, Our Expertise - TralAmo Travel Services</title>
+    <meta name="description" content="TralAmo offers tailored travel experiences with air tickets, hotel bookings, car rentals, customized holiday packages, tours, cruises, and dedicated account management. Best prices guaranteed with 24/7 service.">
+    <link rel="canonical" href="https://tralamo.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Your Journey, Our Expertise - TralAmo Travel Services">
+    <meta property="og:description" content="Tailored travel experiences with air tickets, hotel bookings, car rentals, customized holiday packages, tours, cruises, and dedicated account management.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tralamo.com/">
+    <meta property="og:site_name" content="TralAmo">
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" />
+
+    <!-- Google Analytics (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBF0PCVL7V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KBF0PCVL7V');
+    </script>
+
+    <!-- HubSpot Tracking Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/245515681.js"></script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window,document,"clarity","script","vum63ix55x");
+    </script>
 </head>
 <body>
     <header>
@@ -38,8 +72,8 @@
                 <h1>Your Journey, Our Expertise</h1>
                 <p class="hero-subtitle">Tailored travel experiences with air tickets, hotel bookings, car rentals, customized holiday packages, tours, cruises, and dedicated account management</p>
                 <div class="hero-buttons">
-                    <a href="packages.html" class="btn btn-primary">Explore Packages</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                    <a href="packages.html" class="btn btn-primary" onclick="gtag('event','cta_click',{event_category:'hero',event_label:'explore_packages'})">Explore Packages</a>
+                    <a href="contact.html" class="btn btn-secondary" onclick="gtag('event','cta_click',{event_category:'hero',event_label:'contact_us'})">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -112,7 +146,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="services.html" class="btn btn-outline">View All Services</a>
+                    <a href="services.html" class="btn btn-outline" onclick="gtag('event','cta_click',{event_category:'services_preview',event_label:'view_all_services'})">View All Services</a>
                 </div>
             </div>
         </section>
@@ -123,8 +157,8 @@
                 <h2>Ready to Plan Your Next Adventure?</h2>
                 <p>Experience hassle-free bookings with the best prices in the industry. Contact us today for personalized travel solutions.</p>
                 <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
-                    <a href="packages.html" class="btn btn-secondary">View Packages</a>
+                    <a href="contact.html" class="btn btn-primary" onclick="gtag('event','cta_click',{event_category:'bottom_cta',event_label:'contact_us'})">Contact Us</a>
+                    <a href="packages.html" class="btn btn-secondary" onclick="gtag('event','cta_click',{event_category:'bottom_cta',event_label:'view_packages'})">View Packages</a>
                 </div>
             </div>
         </section>
